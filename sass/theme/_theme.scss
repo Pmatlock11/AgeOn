@@ -1,0 +1,903 @@
+// SCSS Syntax http://sass-lang.com/documentation/file.SASS_REFERENCE.html#css_extensions
+
+// variable declaration in SCSS we use variables to keep style clean and easy to modify
+// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
+$mycolor: #67A6A6;
+$brand-primary : #FFFF;
+$primary-link : #e55625;
+$green-btn : #739600;
+$overlay-color : rgba(0, 228, 237, 0.7);
+$shadow-color : #b5b5b5;
+$red-button : #e55625;
+$light-gray : #b6b6b6;
+$purple : #00c6d7;
+$dark-gray : #4d4f53;
+$black-color: #000;
+$light-gray2: #f2f2f2;
+$light-green: #a0ca14;
+$dark-navy-blue: #1e1656;
+$dim-blue: #8e8aaa;
+$orange: #f37723;
+$light-grey: #d9dadc;
+$news-gray: #f3f3f3;
+
+// in SCSS we nest
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.col-sm-6.no-left-padding {
+    padding-left: 0 !important;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+a {
+    color: $primary-link;
+}
+
+#nav {
+    float: right;
+    font-weight: 500;
+    font-size: 17px;
+
+    ul {
+        margin: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 34px;
+
+            a {
+                display: block;
+            }
+        }
+
+        li.btn_pledge {
+            a {
+                background: $green-btn;
+                color: $brand-primary;
+                padding: 15px 20px 20px;
+                width: 184px;
+                text-align: center;
+                border-radius: 7px;
+            }
+        }
+    }
+}
+
+.wrapper {
+    padding: 0;
+}
+
+.navbar {
+    padding: 0.7rem 15px .9rem;
+}
+
+.navbar h1 {
+    padding: 0;
+}
+
+.banner {
+    color: $brand-primary;
+    height: 713px;
+    overflow: hidden;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding: 97px 0 0 73px;
+
+    h1 {
+        margin: 0 0 2rem;
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+        font-weight: 400;
+        color: $brand-primary;
+
+        span {
+            display: block;
+            font-size: 30px;
+            text-transform: uppercase;
+            line-height: 34px;
+            margin: 9px 8px 0;
+        }
+    }
+
+    .banner_row {
+        overflow: hidden;
+        padding: 0 8px;
+
+        .btn-primary {
+            width: 191px;
+            font-size: 18px;
+            line-height: 26px !important;
+        }
+    }
+
+    .right {
+        padding-top: 40px;
+    }
+}
+
+.btn-primary {
+    background: $green-btn;
+    color: $brand-primary;
+    padding: 15px 20px 20px;
+    width: 184px;
+    text-align: center;
+    border-radius: 7px;
+    display: block;
+
+
+}
+
+.red-button {
+    background: $red-button;
+}
+
+.service_post {
+    .img_holder {
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            left: 15px;
+            bottom: 0;
+            background: $overlay-color;
+        }
+
+        .txt {
+            width: 41%;
+            float: right;
+            color: #fff;
+            padding: 30px 42px 0 0;
+            text-align: right;
+
+            strong {
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 35px;
+                display: block;
+                margin: 0 0 45px;
+            }
+
+            p {
+                margin: 0 0 26px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 0 0 25px;
+    }
+
+    .btn-primary {
+        margin: 0 auto;
+        width: auto;
+        display: inline-block;
+        vertical-align: top;
+        padding: 17px 55px;
+    }
+
+    .btn-primary.transparent {
+        border: 3px solid #fff;
+        background: none;
+        padding: 12px 41px 17px;
+    }
+
+    .p-top25 {
+        padding-top: 25px;
+    }
+
+    p {
+        margin: 0 0 39px;
+    }
+
+    .three_cols {
+        overflow: hidden;
+        padding: 13px 0 0;
+        font-size: 18px;
+
+        .col {
+            padding-top: 21px;
+            padding-bottom: 10px;
+            color: $brand-primary;
+            border-radius: 0 30px 0 30px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#01d8e1+0,05a4af+100 */
+            background: #01d8e1;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #01d8e1 0%, #05a4af 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #01d8e1 0%, #05a4af 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #01d8e1 0%, #05a4af 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#01d8e1', endColorstr='#05a4af', GradientType=0);
+
+            /* IE6-9 */
+            h3 {
+                font-size: 4rem;
+                margin: 0 0 22px;
+                text-shadow: 0 0 9px #6d6c6c;
+            }
+
+            h4 {
+                font-size: 1.6rem;
+                margin: 0 0 22px;
+                text-align: left;
+                font-weight: 400;
+            }
+
+            p {
+                margin: 0 0 20px;
+            }
+
+            .btns {
+                overflow: hidden;
+
+                a {
+                    font-size: 35px;
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    .three_cols.add {
+        .col {
+            h4 {
+                margin: 0 0 70px;
+            }
+        }
+    }
+}
+
+.locate-area {
+    padding: 10px 0 50px;
+    overflow: hidden;
+
+    strong {
+        margin: 0 0 30px;
+        width: 100%;
+        display: block;
+        color: $red-button;
+        font-weight: 500;
+        font-size: 23px;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+    max-width: none;
+
+}
+
+.top_services {
+    max-width: 1140px;
+    margin: -104px auto 0;
+    border-radius: 9px;
+    padding: 39px 10px 10px;
+    background: $brand-primary;
+    box-shadow: 0 0 22px -1px $shadow-color;
+    font-size: 18px;
+}
+
+.service_post {
+    overflow: hidden;
+    margin: 0 0 20px;
+}
+
+.locations {
+    color: $light-gray;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+
+
+
+    li {
+        margin: 0 0 10px;
+        overflow: hidden;
+
+        img {
+            width: 25px;
+            float: left;
+            margin-right: 12px;
+        }
+
+        span {
+            width: 80%;
+            float: left;
+        }
+    }
+
+
+
+    h4 {
+        font-size: 18px;
+        color: $purple;
+    }
+}
+
+.locations.add {
+    color: $dark-gray;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn-primary {
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-primary.purple {
+    background: $purple;
+}
+
+.video_section {
+    margin: 0 0 50px;
+    padding: 40px 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00e5ed+0,00dce5+50,099faa+100 */
+    background: #00e5ed;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00e5ed', endColorstr='#099faa', GradientType=0);
+    /* IE6-9 */
+    overflow: hidden;
+
+    .vid_holder {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vid_player {
+        width: 77px;
+        height: 73px;
+        font-size: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        background: url('../img/btn-video.png') no-repeat;
+    }
+
+    figcaption {
+        padding: 30px 0 0;
+        font-size: 18px;
+        line-height: 27px;
+        color: $brand-primary;
+        display: block;
+        width: 100%;
+    }
+}
+
+.pledge_area {
+    margin: 0 0 50px;
+    background: #00e5ed;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #00e5ed 0%, #00dce5 50%, #099faa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00e5ed', endColorstr='#099faa', GradientType=0);
+    /* IE6-9 */
+    font-size: 17px;
+    color: $brand-primary;
+    border-radius: 9px;
+
+    .align_right {
+        float: right;
+        width: 45%;
+        padding-top: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 29px;
+        font-weight: 400;
+        margin: 0 0 20px;
+    }
+
+    p {
+        margin: 0 0 20px;
+    }
+
+    img {
+        float: left;
+        width: 249px;
+        margin-left: -15px;
+    }
+
+    .box {
+        margin-top: -10px;
+        margin-bottom: -10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: $black-color;
+        background: $brand-primary;
+        box-shadow: 0 0 22px -1px $shadow-color;
+    }
+
+    .newsletter_form {
+        width: 100%;
+        display: block;
+    }
+
+    .newsletter_form input {
+        width: 100%;
+        height: 50px;
+        float: left;
+        width: 70%;
+        padding: 4px 10px 4px 40px;
+        background: $light-gray2 url('../img/bg-email.png') no-repeat 10px 50%;
+        background-size: 20px 15px;
+        border: none;
+    }
+
+    .newsletter_form .btn_submit {
+        width: 121px;
+        padding: 4px 10px;
+        float: right;
+        background: $light-green;
+        color: $brand-primary;
+    }
+
+}
+
+.share_box {
+    margin: 0 auto 50px;
+    border-radius: 9px;
+    background: $light-green;
+    color: $brand-primary;
+    -webkit-box-shadow: 0 0 22px -1px $shadow-color;
+    box-shadow: 0 5px 10px -1px $shadow-color;
+
+    h2 {
+        margin: 0;
+        padding: 32px 0;
+        font-size: 40px;
+        line-height: 44px;
+
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+    }
+
+    p {
+        margin: 0 0 40px;
+    }
+
+    .text_box {
+        padding: 30px 20px 60px;
+        color: $black-color;
+        background: $brand-primary;
+        overflow: hidden;
+        border-radius: 9px;
+    }
+
+    .btn-primary.transparent {
+        width: auto;
+        max-width: 270px;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $light-green;
+        background: none;
+        border: 2px solid $light-green;
+        border-radius: 0;
+    }
+}
+
+.share_box.orange {
+    background: $orange;
+
+    .transparent {
+        border-color: $orange;
+        color: $orange;
+    }
+}
+
+.misc_area {
+    padding: 50px 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ecab01+0,e98810+51,e55625+100 */
+    background: #ecab01;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #ecab01 0%, #e98810 51%, #e55625 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ecab01 0%, #e98810 51%, #e55625 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ecab01 0%, #e98810 51%, #e55625 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ecab01', endColorstr='#e55625', GradientType=1);
+
+    /* IE6-9 fallback on horizontal gradient */
+    .pledge_area {
+        margin: 0;
+        background: none;
+    }
+
+    .box {
+        margin: 0;
+        border-radius: 9px;
+        box-shadow: none;
+
+        strong {
+            color: $primary-link;
+            display: block;
+            color: #e55625;
+            font-size: 19px;
+            margin: 0 0 15px;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 20px 0 0;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
+
+    .demo_links {
+        overflow: hidden;
+
+        li {
+            width: 48%;
+            float: left;
+        }
+    }
+
+    .layout_clear {
+        overflow: hidden;
+    }
+
+    .newsletter_form .btn_submit.btn_submit {
+        background: $green-btn;
+    }
+}
+
+#footer {
+    width: 100%;
+    padding: 40px 0 20px;
+    color: $brand-primary;
+    overflow: hidden;
+    background: $dark-navy-blue;
+
+    ul {
+        overflow: hidden;
+
+        li {
+            margin: 0 15px 10px 0;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        a {
+            font-size: 18px;
+            line-height: 22px;
+            color: $purple;
+        }
+    }
+
+    ul.socials {
+        font-size: 17px;
+    }
+
+    ul.quick_links {
+        li {
+            width: 25%;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 15px;
+        ;
+    }
+
+    .btn-primary {
+        margin: 0;
+    }
+
+    .rights {
+        width: 100%;
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        color: $dim-blue;
+
+        a {
+            color: $dim-blue;
+        }
+
+    }
+}
+
+.max_width {
+    width: auto;
+    max-width: 100%;
+}
+
+.main_sec_header {
+    width: 100%;
+    color: $dark-gray;
+    font-size: 18px;
+    line-height: 32px;
+    overflow: hidden;
+    margin: 40px 0 30px;
+
+    h2 {
+        margin: 0 0 20px;
+        color: $primary-link;
+        font-weight: 500;
+
+        span {
+            padding: 0 40px 10px;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        }
+
+        span:after {
+            width: 200px;
+            position: absolute;
+            content: '';
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            background: $dark-gray;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.posts {
+    overflow: hidden;
+
+    h2 {
+        width: 100%;
+        margin: 0 0 30px;
+        color: $primary-link;
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    ul {
+        width: 100%;
+        overflow: hidden;
+
+        li {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .img_holder {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border-radius: 100%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .text {
+            padding-left: 20px;
+            overflow: hidden;
+
+            .title {
+                margin: 0 0 20px;
+                color: $primary-link;
+                font-weight: 400;
+                font-size: 23px;
+            }
+        }
+    }
+
+    .list_view {
+
+        li {
+            margin: 0 0 40px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(0, 0, 0, 0.1) inset;
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 19px -4px rgba(0, 0, 0, .3),
+                0 0 31px rgba(0, 0, 0, .1) inset;
+        }
+    }
+
+    .grid_view {
+        display: flex;
+
+        li {
+            margin: 0 0 40px;
+            padding: 10px;
+            position: relative;
+            box-shadow: none;
+
+            .img_holder {
+                float: none;
+                margin: 0 auto 13px;
+            }
+
+            .text {
+                width: 100%;
+                padding: 0;
+                clear: both;
+                text-align: center;
+            }
+
+            .title {
+                font-weight: 500;
+                font-size: 18px;
+                color: $dark-gray;
+            }
+        }
+    }
+}
+
+.events_list {
+    .title {
+        width: 100%;
+        margin: 0 0 7px;
+        display: block;
+        color: $orange;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .row {
+        position: relative;
+        padding: 30px 0 20px;
+    }
+
+    .row:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        left: 15px;
+        right: 15px;
+        top: 0;
+        background: $light-grey;
+    }
+
+    .row:first-child:after {
+        display: none;
+    }
+
+}
+
+.btn-default {
+    padding: 8px 10px;
+    display: block;
+    border-radius: 30px;
+    color: $brand-primary;
+    background: $purple;
+
+
+}
+
+.btn-default:hover {
+    color: $brand-primary;
+}
+
+.visual {
+    height: 400px;
+
+    .container,
+    .row {
+        height: 100%;
+    }
+
+    h2 {
+        color: $orange;
+    }
+}
+
+.d-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.v-middle {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+.news_area {
+    margin: 0 0 50px;
+    padding: 50px 0 20px;
+    background: $news-gray;
+
+    .news_list {
+        .text {
+            padding: 28px 23px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        img {
+            height: 165px;
+        }
+
+        .column {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            width: 100%;
+            margin: 0 0 7px;
+            display: block;
+            color: $orange;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .btn_more {
+            color: $purple;
+            font-weight: 600;
+        }
+
+        a {
+            color: $purple;
+        }
+
+        .socials {
+            padding: 20px 0 0;
+            font-size: 21px;
+            overflow: hidden;
+
+            li {
+                margin-right: 27px;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    }
+}
