@@ -20,6 +20,8 @@ $dim-blue: #8e8aaa;
 $orange: #f37723;
 $light-grey: #d9dadc;
 $news-gray: #f3f3f3;
+$buttons-green: #83a60e;
+$input-border: #dfdfdf;
 
 // in SCSS we nest
 body {
@@ -32,6 +34,16 @@ a:hover {
 
 .col-sm-6.no-left-padding {
     padding-left: 0 !important;
+}
+
+.center_block {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex_layout {
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -821,7 +833,7 @@ a {
 }
 
 .visual {
-    height: 400px;
+    min-height: 400px;
 
     .container,
     .row {
@@ -830,6 +842,31 @@ a {
 
     h2 {
         color: $orange;
+    }
+
+    h2.bold {
+        font-weight: 600;
+        color: $primary-link;
+    }
+
+    strong {
+        display: block;
+        font-size: 20px;
+        color: $dark-gray;
+        font-weight: 600;
+    }
+
+    .story {
+        margin-top: 50px;
+
+        h2 {
+            margin: 0 0 9px;
+            font-size: 22px;
+        }
+
+        p {
+            margin: 0 0 30px;
+        }
     }
 }
 
@@ -845,6 +882,10 @@ a {
     padding: 0 15px;
     display: table-cell;
     vertical-align: middle;
+}
+
+.v-middle.no-padding {
+    padding: 0;
 }
 
 
@@ -899,5 +940,134 @@ a {
                 vertical-align: top;
             }
         }
+    }
+}
+
+#demo {
+    width: 100%;
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        padding: 19px 0;
+        text-align: center;
+        color: #fffF;
+        background: #83a60e;
+        top: auto;
+        right: 0;
+        left: auto;
+        width: 72px;
+        opacity: 1;
+    }
+
+    .carousel-control-prev {
+        right: 60px;
+    }
+
+    .carousel-item {
+        position: relative;
+    }
+
+    .slide_caption {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $brand-primary;
+        bottom: 0;
+        font-weight: 300;
+        line-height: 28px;
+        padding: 0 40px;
+        background: rgba(131, 166, 14, .5);
+
+        p {
+            text-shadow: 3px 2px 5px #000;
+        }
+
+        .quote_img {
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.sharing_row {
+    width: 100%;
+    padding: 20px 0 40px;
+
+    strong,
+    ul {
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+
+        li {
+            margin: 0 20px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 24px;
+
+            a {
+                color: $purple;
+            }
+        }
+    }
+
+    strong {
+        font-weight: 400;
+        color: $purple;
+    }
+}
+
+.full_description {
+    width: 100%;
+    margin: 0 0 50px;
+    color: $dark-gray;
+
+    h3 {
+        margin: 0 0 16px;
+        font-size: 23px;
+    }
+
+    .btns {
+        a {
+            margin: 0 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.contact_form {
+
+    input,
+    textarea {
+        width: 100%;
+        height: 50px;
+        padding: 20px 15px;
+        display: block;
+        border: 2px solid $input-border;
+        color: $input-border;
+        resize: none;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    .row {
+        margin-bottom: 14px;
+    }
+
+    label {
+        margin: 0 15px;
+        height: auto;
+        border: 3px solid $purple;
+        color: $purple;
+        text-align: center;
+        padding: 10px 50px;
+        border-radius: 30px;
+    }
+
+    .hidden {
+        display: none;
     }
 }

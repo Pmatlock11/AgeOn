@@ -215,7 +215,7 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 		<div class="<?php echo esc_attr($container); ?>" >
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-6 center_block">
 					<div class="share_box text-center">
 						<h2>SHARE <span>your story with us</span></h2>
 						<div class="text_box">
