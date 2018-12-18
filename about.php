@@ -32,26 +32,26 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 		<div class="<?php echo esc_attr($container); ?> posts" >
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-12 col-md-8">
 					<strong class="title">Age On Rage On</strong>
 					<p>LeadingAge California has represented nonprofit senior living and service providers since 1961. Each year, the association continues to serve, inspire and advocate for our members through multiple channels, providing members with the tools they need to carry out their missions. As the champion of aging services in the state, the association prides itself on its deep relationships both in the Capitol and among its members. The association’s advocacy, educational programs and public relations help its members serve the needs of more than 100,000 of the state’s older adults. Representing nearly 600 members focused on senior living and care – including affordable housing, continuing care retirement communities, assisted living, skilled nursing, home- and community-based care and business partners and residents, LeadingAge California spans the full continuum of care. Whether working behind the scenes, testifying at public hearings, building coalitions, visiting member communities or visiting with elected officials, LeadingAge California actively works to create system changes through advocacy that strengthens members’ viability and supports innovations in the delivery of aging services.</p>
 				</div>
-				<div class="col-sm-3">
-					<img src="<?php bloginfo('template_url'); ?>/img/right_logo.png" class="img-responsive">
+				<div class="col-sm-12 col-md-3">
+					<img src="<?php bloginfo('template_url'); ?>/img/right_logo.png" class="img-responsive sm_max">
 				</div>
 			</div>
 			<div class="row map_padding">
-				<div class="col-sm-12 text-center">
+				<div class="col-12 text-center">
 					<div class="map_img_holder"><img src="<?php bloginfo('template_url'); ?>/img/map.png"></div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-12 col-md-8">
 					<strong class="title">LeadingAge California</strong>
 					<p>LeadingAge California has represented nonprofit senior living and service providers since 1961. Each year, the association continues to serve, inspire and advocate for our members through multiple channels, providing members with the tools they need to carry out their missions. As the champion of aging services in the state, the association prides itself on its deep relationships both in the Capitol and among its members. The association’s advocacy, educational programs and public relations help its members serve the needs of more than 100,000 of the state’s older adults. Representing nearly 600 members focused on senior living and care – including affordable housing, continuing care retirement communities, assisted living, skilled nursing, home- and community-based care and business partners and residents, LeadingAge California spans the full continuum of care. Whether working behind the scenes, testifying at public hearings, building coalitions, visiting member communities or visiting with elected officials, LeadingAge California actively works to create system changes through advocacy that strengthens members’ viability and supports innovations in the delivery of aging services.</p>
 				</div>
-				<div class="col-sm-3">
-					<img src="<?php bloginfo('template_url'); ?>/img/img8.jpg" class="img-responsive">
+				<div class="col-sm-12 col-md-3">
+					<img src="<?php bloginfo('template_url'); ?>/img/img8.jpg" class="img-responsive sm_max">
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
-		<div class="<?php echo esc_attr($container); ?>" >
+		<div class="<?php echo esc_attr($container); ?> sharing_boxes" >
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="share_box text-center">
@@ -124,7 +124,7 @@ $container = get_theme_mod('understrap_container_type');
 							<li>List Item</li>
 						</ul>
 					</div>
-					<div class="col-sm-5 box text-center">
+					<div class="col-sm-6 col-md-5 box text-center">
 						<div class="newsletter_form">
 							<form>
 								<strong>Signup for our email newsletter</strong>

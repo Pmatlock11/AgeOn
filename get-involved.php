@@ -87,38 +87,38 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 		<div class="<?php echo esc_attr($container); ?> events_list" >
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-12 col-sm-8">
 					<strong class="title">"Can you hear me NOW" Communication Plan <br>Development</strong>
 					<p>Online/Webinar</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p>11/15/2018</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p><a href="#" class="btn-default text-center">REGISTER</a></p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-12 col-sm-8">
 					<strong class="title">"Can you hear me NOW" Communication Plan <br>Development</strong>
 					<p>Online/Webinar</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p>11/15/2018</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p><a href="#" class="btn-default text-center">REGISTER</a></p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-12 col-sm-8">
 					<strong class="title">"Can you hear me NOW" Communication Plan <br>Development</strong>
 					<p>Online/Webinar</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p>11/15/2018</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-12 col-sm-2">
 					<p><a href="#" class="btn-default text-center">REGISTER</a></p>
 				</div>
 			</div>
