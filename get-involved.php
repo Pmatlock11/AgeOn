@@ -55,7 +55,7 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
-		<div class="<?php echo esc_attr($container); ?>" >
+		<div class="<?php echo esc_attr($container); ?> sharing_boxes" >
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="share_box text-center">

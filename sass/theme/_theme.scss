@@ -671,7 +671,7 @@ a {
     font-size: 18px;
     line-height: 32px;
     overflow: hidden;
-    margin: 40px 0 30px;
+    margin: 40px 15px 30px;
 
     h2 {
         margin: 0 0 20px;
@@ -850,6 +850,10 @@ a {
 
 .btn-default:hover {
     color: $brand-primary;
+}
+
+.visual.in-news {
+    height: 400px;
 }
 
 .visual {
@@ -1216,9 +1220,26 @@ a {
     .misc_area .box strong {
         font-size: 17px;
     }
+
+    .visual {
+        min-height: 200px;
+        height: 200px;
+    }
+
+    .visual.in-news {
+        height: 200px;
+    }
+
+    .news_area {
+        padding: 20px 0 0;
+    }
 }
 
 @media only screen and (max-width:767px) {
+    .news_area .news_list .text {
+        padding: 11px;
+    }
+
     .sm_max {
         width: auto;
         max-width: 100%;
@@ -1269,7 +1290,7 @@ a {
     }
 
     .main_sec_header {
-        margin: 10px 0 0;
+        margin: 10px 15px 30px;
 
         h2 {
             font-size: 20px;
@@ -1321,7 +1342,20 @@ a {
         .row {
             padding: 10px 0 0;
         }
+
+        .title {
+            font-size: 15px;
+        }
     }
+
+    .news_area {
+        .news_list {
+            .column {
+                width: 50%;
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width:576px) {
@@ -1331,7 +1365,9 @@ a {
     }
 
     .main_sec_header p {
-        line-height: 22px;
+        line-height: 17px;
+        font-size: 13px;
+        margin-top: 10px;
     }
 
     .events_list .title {

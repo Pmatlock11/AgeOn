@@ -23,7 +23,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="wrapper" id="index-wrapper">
 	<main class="site-main" id="main">
-		<div class="visual" style="background:url('<?php bloginfo('template_url'); ?>/img/placeholder2.png') no-repeat; background-size:cover;">
+		<div class="visual in-news" style="background:url('<?php bloginfo('template_url'); ?>/img/placeholder2.png') no-repeat; background-size:cover;">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
 					<div class="d-table">
@@ -143,7 +143,7 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
-		<div class="<?php echo esc_attr($container); ?>" >
+		<div class="<?php echo esc_attr($container); ?> sharing_boxes" >
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="share_box text-center">
