@@ -25,7 +25,7 @@ $container = get_theme_mod('understrap_container_type');
 	<main class="site-main" id="main">
 		<div class="<?php echo esc_attr($container); ?>" >
 			<div class="row">
-				<header class="main_sec_header text-center">
+				<header class="main_sec_header text-center partners">
 					<h2><span>Partners</span></h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis lectus eget <br>diam sodales, in afficitur tortor gravida.</p>
 				</header>
@@ -66,49 +66,48 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="row">
 					<h2 class="text-center">Our Gold Partners</h2>
 					<ul class="list-unstyled list_view grid_view">
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">Our Partners</strong>
 								<p>Other info on Partner</p>
 							</div>
 						</li>
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">&nbsp;</strong>
 								<p>&nbsp;</p>
 							</div>
 						</li>
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">Our Partners</strong>
 								<p>Other info on Partner</p>
 							</div>
 						</li>
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">Our Partners</strong>
 								<p>Other info on Partner</p>
 							</div>
 						</li>
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">Our Partners</strong>
 								<p>Other info on Partner</p>
 							</div>
 						</li>
-						<li class="col-sm-2">
+						<li class="col-12 col-sm-2">
 							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
 							<div class="text">
 								<strong class="title">&nbsp;</strong>
 								<p>&nbsp;</p>
 							</div>
 						</li>
-						
 					</ul>
 				</div>
 			</div>

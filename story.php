@@ -31,14 +31,14 @@ $container = get_theme_mod('understrap_container_type');
 				</header>
 			</div>
 		</div>
-		<div class="visual">
+		<div class="visual story">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
 					<div class="d-table">
 						<div class="v-middle no-padding">
 							<div class="flex_layout">
-								<div class="col-sm-6"><img src="<?php bloginfo('template_url'); ?>/img/img6.png" alt="#" class="img-responsive"></div>
-								<div class="col-sm-6 descriptive">
+								<div class="col-12 col-sm-6"><img src="<?php bloginfo('template_url'); ?>/img/img6.png" alt="#" class="img-responsive"></div>
+								<div class="col-12 col-sm-6 descriptive">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a sollicitudin lorem, a malesuada dolor. Suspendisse id pretium libero. Aenean nec ante neque. Aenean condimentum metus vitae orci consectetur, non malesuada leo auctor. Donec euismod sit amet urna in euismod. Pellentesque interdum sem arcu, condimentum volutpat eros blandit sit amet. Nulla luctus erat vitae vehicula imperdiet. Cras ullamcorper justo ac sem ultrices porttitor. Nunc eget nulla ligula. Quisque a ex vitae turpis rhoncus sollicitudin. Sed molestie lorem erat.</p>
 									<a href="#" class="btn-primary purple left">See the Story</a>
 								</div>

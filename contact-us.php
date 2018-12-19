@@ -45,9 +45,9 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<input type="file" id="file1" multiple class="hidden">
-					<label for="file1"><i class="fa fa-upload" aria-hidden="true"></i> Upload Your images</label>
+					<label for="file1" class="custom_file_btn"><i class="fa fa-upload" aria-hidden="true"></i> Upload Your images</label>
 					<input type="file" id="file2" class="hidden">
-					<label for="file2"><i class="fa fa-upload" aria-hidden="true"></i> Upload Your Video</label>
+					<label for="file2" class="custom_file_btn"><i class="fa fa-upload" aria-hidden="true"></i> Upload Your Video</label>
 				</div>
 			</div>
 			<div class="row">
@@ -55,9 +55,19 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<input type="checkbox" id="check1">
-					<label for="check1"></label>
+					<input type="checkbox" id="check1" class="hidden" checked>
+					<label for="check1" class="custom_checkbox active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed neque aliquet, tincidunt lorem nec, sodales felis. Suspendisse interdum magna eu ipsum consequat dictum. Donec ut ex sed tellus fringilla tristique ut sed lacus. Quisque vestibulum sem in leo accumsan commodo. Praesent in maximus massa, vitae aliquet nunc. Duis.</label>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<input type="checkbox" id="check2" class="hidden">
+					<label for="check2" class="custom_checkbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed neque aliquet, tincidunt lorem nec, sodales felis. Suspendisse interdum magna eu ipsum consequat dictum. Donec ut ex sed tellus.</label>
+				</div>
+			</div>
+			<div class="row text-center submit_area">
+				<input type="submit" value="Submit Story" class="btn-primary">
+				<p>Lorem ipsum dolor sit amet, consectetur adipscing elit.</p>
 			</div>
 		</div>
 	</main>

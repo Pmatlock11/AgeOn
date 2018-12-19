@@ -38,7 +38,16 @@ $container = get_theme_mod('understrap_container_type');
 </div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
-
+<script>
+	jQuery(document).ready(function () {
+		jQuery('.navbar-toggler').click(function(){
+			jQuery('#nav').slideToggle();
+		});
+		jQuery('.custom_checkbox').click(function(){
+			jQuery(this).toggleClass('active')
+		});
+	});
+</script>
 <?php wp_footer(); ?>
 
 </body>

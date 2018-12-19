@@ -48,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 							<a href="#" class="btn-primary red-button">See the Impact</a>
 						</div>
 						<div class="col-sm-8 img_holder">
-							<img src="<?php bloginfo('template_url'); ?>/img/img1.png" alt="#" class="img-responsive">
+							<img src="<?php bloginfo('template_url'); ?>/img/img1.png" alt="#" class="img-responsive block_img">
 							<div class="overlay">
 								<div class="txt">
 									<strong>"[Strong quote from <br>indivisual's story here]"</strong>
@@ -85,7 +85,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="<?php echo esc_attr($container); ?>" >
 					<div class="row">
 						<div class="col-sm-8 img_holder">
-							<img src="<?php bloginfo('template_url'); ?>/img/img1.png" alt="#" class="img-responsive">
+							<img src="<?php bloginfo('template_url'); ?>/img/img1.png" alt="#" class="img-responsive block_img">
 							<div class="overlay">
 								<div class="txt">
 									<strong>"[Strong quote from <br>indivisual's story here]"</strong>
@@ -130,7 +130,7 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 				<div class="row">
 					<div class="col-sm-6">
-						<img src="<?php bloginfo('template_url'); ?>/img/img-map.png" class="img-responsive" alt="#">
+						<img src="<?php bloginfo('template_url'); ?>/img/img-map.png" class="img-responsive map_img" alt="#">
 					</div>
 					<div class="col-sm-3 pull-right">
 						<ul class="list-unstyled locations">

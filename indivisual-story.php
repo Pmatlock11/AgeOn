@@ -23,14 +23,14 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="wrapper" id="index-wrapper">
 	<main class="site-main" id="main">
-		<div class="visual">
+		<div class="visual indivisual">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
 					<div class="d-table">
 						<div class="v-middle no-padding">
 							<div class="flex_layout">
-								<div class="col-sm-6"><img src="<?php bloginfo('template_url'); ?>/img/img3.png" alt="#" class="img-responsive"></div>
-								<div class="col-sm-6">
+								<div class="col-12 col-sm-6"><img src="<?php bloginfo('template_url'); ?>/img/img3.png" alt="#" class="img-responsive"></div>
+								<div class="col-12 col-sm-6">
 									<strong>Meet</strong>
 									<h2 class="bold">Maggie</h2>
 									<p>When Maggie lost her husband, she still found her community.</p>
@@ -64,28 +64,6 @@ $container = get_theme_mod('understrap_container_type');
 								</div>
 							</div>
 						</div>
-						<div class="carousel-item">
-							<img src="<?php bloginfo('template_url'); ?>/img/img4.png" alt="#" class="img-responsive">
-							<div class="slide_caption">
-								<div class="d-table">
-									<div class="v-middle">
-										<img src="<?php bloginfo('template_url'); ?>/img/quote.png" alt="#" class="quote_img">
-										<p>I can't imagine what would happen to someone ike me without the support provided through these government initiatives</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="<?php bloginfo('template_url'); ?>/img/img4.png" alt="#" class="img-responsive">
-							<div class="slide_caption">
-								<div class="d-table">
-									<div class="v-middle">
-										<img src="<?php bloginfo('template_url'); ?>/img/quote.png" alt="#" class="quote_img">
-										<p>I can't imagine what would happen to someone ike me without the support provided through these government initiatives</p>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 					<!-- Left and right controls -->
 					<a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -95,24 +73,24 @@ $container = get_theme_mod('understrap_container_type');
 						<i class="fa fa-chevron-right" aria-hidden="true"></i>
 					</a>
 				</div>
-				<div class="row sharing_row text-center">
-					<div class="col-sm-12">
-						<strong>Share this story</strong>
-						<ul class="list-unstyled">
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						</ul>
-					</div>
+			</div>
+			<div class="row sharing_row text-center">
+				<div class="col-sm-12">
+					<strong>Share this story</strong>
+					<ul class="list-unstyled">
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					</ul>
 				</div>
-				<div class="row full_description">
-					<div class="col-sm-12">
-						<h3 class="text-center">Long Terms Support and Services along with the workforce required is <br>a vital part of our community keeping serniors healthy.</h3>
-						<p>Long Terms Support and Services along with the workforce required is a vital part of our community keeping seniors healthy. As the population of California ages the system is ill prepared to sustain the types of LTSS Maggie and her friends have enjoyed. As a community we need to come together and raise the awareness of the need to bolster these programs state wide. You and other future generations need to have the experience Maggie is having, help California… Age. On. Rage. On.</p>
-						<div class="btns text-center">
-							<a href="#" class="btn-primary purple">See the Impact</a>
-							<a href="#" class="btn-primary  purple">Read the Stories</a>
-						</div>
+			</div>
+			<div class="row full_description">
+				<div class="col-sm-12">
+					<h3 class="text-center">Long Terms Support and Services along with the workforce required is <br>a vital part of our community keeping serniors healthy.</h3>
+					<p>Long Terms Support and Services along with the workforce required is a vital part of our community keeping seniors healthy. As the population of California ages the system is ill prepared to sustain the types of LTSS Maggie and her friends have enjoyed. As a community we need to come together and raise the awareness of the need to bolster these programs state wide. You and other future generations need to have the experience Maggie is having, help California… Age. On. Rage. On.</p>
+					<div class="btns text-center">
+						<a href="#" class="btn-primary purple">See the Impact</a>
+						<a href="#" class="btn-primary  purple">Read the Stories</a>
 					</div>
 				</div>
 			</div>
