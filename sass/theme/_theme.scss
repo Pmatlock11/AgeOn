@@ -492,14 +492,14 @@ a {
     h2 {
         margin: 0;
         padding: 32px 0;
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
 
         span {
             display: block;
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: 400;
+            font-size: 40px;
+            line-height: 44px;
         }
     }
 
@@ -528,7 +528,7 @@ a {
     }
 }
 
-.share_box.orange {
+.sharing_boxes .widget_text:last-child .share_box {
     background: $orange;
 
     .transparent {
@@ -597,6 +597,20 @@ a {
     .newsletter_form .btn_submit.btn_submit {
         background: $green-btn;
     }
+
+    a {
+        color: $brand-primary;
+    }
+}
+
+h2:empty,
+p:empty,
+div:empty {
+    display: none;
+}
+
+#wpcf7-f180-p20-o1 {
+    max-width: 100% !important;
 }
 
 #footer {
@@ -616,6 +630,7 @@ a {
         }
 
         a {
+            padding: 0;
             font-size: 18px;
             line-height: 22px;
             color: $purple;
@@ -1067,17 +1082,17 @@ a {
 
     input,
     textarea {
-        width: 100%;
-        height: 50px;
-        padding: 8px 15px;
+        width: 100% !important;
+        height: 50px !important;
+        padding: 8px 15px !important;
         display: block;
-        border: 2px solid $input-border;
-        color: $input-border;
-        resize: none;
+        border: 2px solid $input-border !important;
+        color: $input-border !important;
+        resize: none !important;
     }
 
     textarea {
-        height: 200px;
+        height: 200px !important;
     }
 
     .row {
@@ -1085,6 +1100,7 @@ a {
     }
 
     .custom_file_btn {
+        width: auto !important;
         margin: 0 15px;
         height: auto;
         border: 3px solid $purple;
@@ -1095,13 +1111,13 @@ a {
     }
 
     .hidden {
-        display: none;
+        display: none !important;
     }
 
     input[type="submit"] {
-        width: 150px;
+        width: 150px !important;
         padding: 0;
-        border: none;
+        border: none !important;
         background: $purple;
         display: block;
         margin: 0 auto 10px;
@@ -1117,13 +1133,13 @@ a {
     }
 }
 
-.custom_checkbox {
+.wpcf7-list-item label {
     position: relative;
     margin: 15px 40px 2px;
     padding: 0 70px;
 }
 
-.custom_checkbox:after {
+.wpcf7-list-item label:after {
     width: 33px;
     height: 33px;
     position: absolute;
@@ -1136,8 +1152,12 @@ a {
     background: url('../img/uncheck.png') no-repeat;
 }
 
-.custom_checkbox.active:after {
+.wpcf7-checkbox.active label:after {
     background: url('../img/checked.png') no-repeat;
+}
+
+.wpcf7-checkbox {
+    display: block;
 }
 
 .story_cols {
@@ -1214,6 +1234,91 @@ a {
 
 .carousel-inner {
     padding: 0 15px;
+}
+
+svg {
+    width: 100%;
+}
+
+.ca_state:hover {
+    cursor: pointer;
+    fill: #000;
+}
+
+.location_lising li {
+    position: relative;
+    padding-left: 35px;
+}
+
+.locations li.active {
+    color: #e55625;
+    font-weight: bold;
+}
+
+.location_lising li.active .arrow {
+    background-image: url('../img/arrow-orange.png');
+}
+
+.location_lising .arrow {
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    background-image: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 27px;
+    height: 16px;
+}
+
+.state_des {
+    display: none;
+}
+
+.state_des.active {
+    display: block;
+}
+
+.state_des>h4 {
+    font-weight: 900;
+}
+
+.understrap-read-more-link {
+    display: none;
+}
+
+.wpcf7-form,
+.wpcf7 {
+    br {
+        display: none;
+    }
+}
+
+.newsletter_form {
+
+    .wpcf7-not-valid-tip,
+    .ajax-loader {
+        display: none !important;
+    }
+
+    div.wpcf7-response-output {
+        margin: 0;
+        padding: 7px 10px;
+        font-size: 13px !important;
+        position: relative;
+        height: 33px;
+        overflow: hidden;
+        bottom: -10px;
+    }
+}
+
+.nav-link {
+    padding: 0;
+}
+
+label {
+    input {
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width:1100px) {

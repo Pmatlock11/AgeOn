@@ -45,7 +45,7 @@ $container = get_theme_mod('understrap_container_type');
 
 					<!-- Your site title as branding in the menu -->
 					<?php if (!has_custom_logo()) { ?>
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="AGE ON"></a></h1>
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><img src="<?php echo get_field('logo', 'option'); ?>" alt="AGE ON"></a></h1>
 					<?php 
 			} else {
 				the_custom_logo();
@@ -55,28 +55,27 @@ $container = get_theme_mod('understrap_container_type');
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<nav id="nav">
-					<ul class="list-unstyled">
+					<!-- <ul class="list-unstyled">
 						<li><a href="#">STORIES</a></li>
 						<li><a href="#">GET INVOLVED</a></li>
 						<li><a href="#">IMPACT</a></li>
 						<li><a href="#">NEWS</a></li>
 						<li><a href="#">PARTNERS</a></li>
 						<li class="btn_pledge"><a href="#">Pledge Now</a></li>
-					</ul>
+					</ul> -->
+					<?php wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_class' => 'list-unstyled text-uppercase',
+						'container' => '',
+						'fallback_cb' => '',
+						'depth' => 2,
+						'walker' => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				); ?>
 				</nav>
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id' => 'navbarNavDropdown',
-					'menu_class' => 'navbar-nav ml-auto',
-					'fallback_cb' => '',
-					'menu_id' => 'main-menu',
-					'depth' => 2,
-					'walker' => new Understrap_WP_Bootstrap_Navwalker(),
-				)
-			); ?>
+				
 			<?php if ('container' == $container) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

@@ -26,37 +26,29 @@ $container = get_theme_mod('understrap_container_type');
 		<div class="<?php echo esc_attr($container); ?>" >
 			<div class="row">
 				<header class="main_sec_header text-center partners">
-					<h2><span>Partners</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis lectus eget <br>diam sodales, in afficitur tortor gravida.</p>
+					<h2><span><?php the_title(); ?></span></h2>
+					<p><?php the_field('page_tagline'); ?></p>
 				</header>
 			</div>
 		</div>
 		<section class="posts">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
-					<h2 class="text-center">Our Platinum Partners</h2>
+					<h2 class="text-center"><?php echo get_cat_name(3); ?></h2>
 					<ul class="list-unstyled list_view">
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'platinum');
+					$the_query = new WP_Query($args); ?>
+                            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li>
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
+							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
 							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Lorem ipsum dolor sit amet, consectetur adipscing elit. AEnean mollis lectus eget <br>diam sodales, in officitur tortor gravida. Quisque ultrices, neque vitae ultrices ultrices, mi elit pharetra ipsum, iaculis accumsan velit risus sed neque. Pellentesque a hendrerit augue, vitae eleifend turpis.</p>
+								<strong class="title"><?php the_title(); ?></strong>
+								<p><?php the_content(); ?></p>
 							</div>
 						</li>
-						<li>
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Lorem ipsum dolor sit amet, consectetur adipscing elit. AEnean mollis lectus eget <br>diam sodales, in officitur tortor gravida. Quisque ultrices, neque vitae ultrices ultrices, mi elit pharetra ipsum, iaculis accumsan velit risus sed neque. Pellentesque a hendrerit augue, vitae eleifend turpis.</p>
-							</div>
-						</li>
-						<li>
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Lorem ipsum dolor sit amet, consectetur adipscing elit. AEnean mollis lectus eget <br>diam sodales, in officitur tortor gravida. Quisque ultrices, neque vitae ultrices ultrices, mi elit pharetra ipsum, iaculis accumsan velit risus sed neque. Pellentesque a hendrerit augue, vitae eleifend turpis.</p>
-							</div>
-						</li>
+						<?php wp_reset_postdata();
+					endwhile;
+					endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -64,50 +56,21 @@ $container = get_theme_mod('understrap_container_type');
 		<section class="posts">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
-					<h2 class="text-center">Our Gold Partners</h2>
+					<h2 class="text-center"><h2 class="text-center"><?php echo get_cat_name(4); ?></h2></h2>
 					<ul class="list-unstyled list_view grid_view">
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'gold-partners');
+					$the_query = new WP_Query($args); ?>
+                            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
+							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
 							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
+								<strong class="title"><?php the_title(); ?></strong>
+								<p><?php the_content(); ?></p>
 							</div>
 						</li>
-						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">&nbsp;</strong>
-								<p>&nbsp;</p>
-							</div>
-						</li>
-						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-12 col-sm-2">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">&nbsp;</strong>
-								<p>&nbsp;</p>
-							</div>
-						</li>
+						<?php wp_reset_postdata();
+					endwhile;
+					endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -115,36 +78,21 @@ $container = get_theme_mod('understrap_container_type');
 		<section class="posts">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
-					<h2 class="text-center">Our Silver Partners</h2>
+					<h2 class="text-center"><h2 class="text-center"><?php echo get_cat_name(5); ?></h2></h2>
 					<ul class="list-unstyled list_view grid_view">
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'silver-partners');
+					$the_query = new WP_Query($args); ?>
+                            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-sm-3">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
+							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
 							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
+								<strong class="title"><?php the_title(); ?></strong>
+								<p><?php the_content(); ?></p>
 							</div>
 						</li>
-						<li class="col-sm-3">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-sm-3">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-sm-3">
-							<div class="img_holder"><img src="<?php bloginfo('template_url'); ?>/img/placeholder.png" alt="#" class="img-responsive"></div>
-							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
+						<?php wp_reset_postdata();
+					endwhile;
+					endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -152,116 +100,29 @@ $container = get_theme_mod('understrap_container_type');
 		<section class="posts">
 			<div class="<?php echo esc_attr($container); ?>" >
 				<div class="row">
-					<h2 class="text-center">Our Bronze Partners</h2>
+					<h2 class="text-center"><h2 class="text-center"><?php echo get_cat_name(6); ?></h2></h2>
 					<ul class="list-unstyled list_view grid_view">
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'bronze-partners');
+					$the_query = new WP_Query($args); ?>
+                            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-sm-3">
-							<div class="text text-left">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-sm-3">
-							<div class="text text-left">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-sm-3">
-							<div class="text text-left">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
-							</div>
-						</li>
-						<li class="col-sm-3">
+							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
 							<div class="text">
-								<strong class="title">Our Partners</strong>
-								<p>Other info on Partner</p>
+								<strong class="title"><?php the_title(); ?></strong>
+								<p><?php the_content(); ?></p>
 							</div>
 						</li>
+						<?php wp_reset_postdata();
+					endwhile;
+					endif; ?>
 					</ul>
 				</div>
 			</div>
 		</section>
-		<div class="<?php echo esc_attr($container); ?>" >
-			<div class="row pledge_area">
-				<div class="col-sm-6">
-					<img src="<?php bloginfo('template_url'); ?>/img/img2.png">
-					<div class="align_right p-top">
-						<p>Will you take a stand to protect California's older adults?</p>
-						<h2>PLEDGE TODAY</h2>
-						<p>Sign the pledge to ensure California older adults have access to long-term services and support.</p>
-					</div>
-				</div>
-				<div class="col-sm-5 box text-center">
-					<p>I support aging Californians</p>
-					<p>The state is unprepared for the looming aging crisis. The status quo is unacceptable - it's time for a change.</p>
-					<p>I call on our elected officials to ensure our growing population of older adults has access to long-term services and support.</p>
-					<p>I pledge to help California #AgeOnRageOn.</p>
-					<div class="newsletter_form">
-						<form>
-							<input type="email" placeholder="Email">
-							<input type="submit" value="SUBMIT" class="btn_submit text-center">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="<?php echo esc_attr($container); ?>" >
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="share_box text-center">
-						<h2>SHARE <span>your story with us</span></h2>
-						<div class="text_box">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis lectus eget diam sodales.</p>
-							<a href="#" class="btn-primary green transparent">Share</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="share_box text-center orange">
-						<h2>WRITE <span>to your legistlature</span></h2>
-						<div class="text_box">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis lectus eget diam sodales.</p>
-							<a href="#" class="btn-primary green transparent">Write</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="<?php echo esc_attr($container); ?> sharing_boxes" >
+			<?php get_template_part('support-part'); ?>
+			<?php get_template_part('sharing-widgets'); ?>
 		</div>
 	</main>
-	<footer id="footer">
-		<div class="<?php echo esc_attr($container); ?>" >
-			<div class="row">
-				<div class="col-sm-5">
-					<p>Sign the pledge to ensure California <br>older adults have access to long-term<br> services and support.</p>
-					<a href="#" class="btn-primary purple">Pledge Today</a>
-				</div>
-				<div class="col-sm-3">
-					<ul class="socials list-unstyled">
-						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					</ul>
-					<ul class="quick_links list-unstyled">
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt="#" class="max_width">
-					<img src="<?php bloginfo('template_url'); ?>/img/logo3.png" alt="#" class="max_width">
-				</div>
-			</div>
-			<div class="row text-center">
-				<p class="rights">Copyright 2018 LeadingAge California <a href="#">Privacy</a> <a href="#">Terms</a></p>
-			</div>
-		</div>
-	</footer>
 </div><!-- Wrapper end -->
 <?php get_footer(); ?>
