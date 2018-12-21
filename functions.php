@@ -99,18 +99,23 @@ register_post_type('news', array(
 	'taxonomies' => array('post_tag', 'category'),
 	'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 ));
-register_post_type('story', array(
-	'label' => __('Stories'),
-	'singular_label' => __('Story'),
-	'public' => true,
-	'show_ui' => true,
-	'capability_type' => 'post',
-	'hierarchical' => false,
-	'rewrite' => false,
-	'query_var' => false,
-	'taxonomies' => array('post_tag', 'category'),
-	'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
-));
+add_action('init', 'create_story_post_type');
+function create_story_post_type()
+{
+	register_post_type('story', array(
+		'label' => __('Stories'),
+		'singular_label' => __('Story'),
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => false,
+		'query_var' => false,
+		'taxonomies' => array('post_tag', 'category'),
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
+	));
+}
+
 add_action('init', 'create_partner_post_type');
 function create_partner_post_type()
 {

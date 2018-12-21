@@ -36,9 +36,8 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="row">
 					<h2 class="text-center"><?php echo get_cat_name(3); ?></h2>
 					<ul class="list-unstyled list_view">
-						<?php $args = array('post_type' => 'Partner', 'category_name' => 'platinum');
-					$the_query = new WP_Query($args); ?>
-                            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'platinum'); $the_query = new WP_Query($args); ?>
+                        <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li>
 							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
 							<div class="text">
@@ -46,9 +45,7 @@ $container = get_theme_mod('understrap_container_type');
 								<p><?php the_content(); ?></p>
 							</div>
 						</li>
-						<?php wp_reset_postdata();
-					endwhile;
-					endif; ?>
+						<?php wp_reset_postdata(); endwhile; endif; ?>
 					</ul>
 				</div>
 			</div>

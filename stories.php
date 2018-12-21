@@ -37,26 +37,28 @@ if (have_posts()) {
 		</div>
 		<div class="visual story">
 			<div class="<?php echo esc_attr($container); ?>" >
+				<?php $args = array('post_type' => 'story', 'category_name' => 'feaured-story'); $the_query = new WP_Query($args); ?>
+				<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="row">
 					<div class="d-table">
 						<div class="v-middle no-padding">
 							<div class="flex_layout">
-								<div class="col-12 col-sm-6"><img src="<?php the_field('photo'); ?>" alt="#" class="img-responsive"></div>
+								<div class="col-12 col-sm-6"><img src="<?php the_field('large_image'); ?>" alt="#" class="img-responsive"></div>
 								<div class="col-12 col-sm-6 descriptive">
-									<p><?php the_field('story_description'); ?></p>
+									<p><?php the_excerpt() ?></p>
 									<a href="<?php the_permalink(); ?>" class="btn-primary purple left">See the Story</a>
 								</div>
 							</div>
 						</div>
 					</div>			
-				</div>			
+				</div>
+				<?php wp_reset_postdata(); endwhile; endif; ?>		
 			</div>
 		</div>
 		<div class="<?php echo esc_attr($container); ?> story_cols">
 			<div class="row">
-				<?php $args = array('post_type' => 'story', 'posts_per_page' => -1, 'order' => 'ASC');
-			$the_query = new WP_Query($args); ?>
-<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+				<?php $args = array('post_type' => 'story', 'posts_per_page' => 6, 'order' => 'ASC'); $the_query = new WP_Query($args); ?>
+				<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="col-sm-4 text-center story_col">
 					<?php the_post_thumbnail(); ?>
 					<h2><?php the_title(); ?></h2>

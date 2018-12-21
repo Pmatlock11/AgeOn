@@ -56,7 +56,7 @@ $container = get_theme_mod('understrap_container_type');
 					<p><?php echo get_the_date(); ?></p>
 				</div>
 				<div class="col-12 col-sm-2">
-					<p><a href="<?php the_permalink(); ?>" class="btn-default text-center">REGISTER</a></p>
+					<p><a href="#" class="btn-default text-center">REGISTER</a></p>
 				</div>
 			</div>
 			<?php wp_reset_postdata();
