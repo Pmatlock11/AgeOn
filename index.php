@@ -30,14 +30,14 @@ if (have_posts()) {
 		<?php $home_bg_img = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
 		<section class="banner" style="background:url('<?php echo $home_bg_img[0]; ?>') no-repeat; background-size:100% 100%;">
 			<div class="<?php echo esc_attr($container); ?>" >
-				<div class="row">
+				<div class="row p_relative">
 					<div class="col-sm-5">
 						<h1><?php the_field('banner_heading'); ?> <span><?php the_field('banner_tagline'); ?></span></h1>
 						<div class="banner_row">
 							<a href="#" class="btn-primary">Pledge Now</a>
 						</div>
 					</div>
-					<div class="col-sm-6 pull-right right">
+					<div class="col-11 col-sm-6 banner_text pull-right right">
 						<p><?php the_content(); ?></p>
 					</div>
 				</div>
@@ -46,7 +46,7 @@ if (have_posts()) {
 		<div class="top_services">
 			<div class="service_post">
 				<div class="<?php echo esc_attr($container); ?>" >
-					<div class="row">
+					<div class="row d-none-xs-small">
 						<div class="col-sm-4 text-center p-top25">
 							<h2><?php the_field('left_heading'); ?></h2>
 							<p><?php the_field('left_tagline'); ?></p>
@@ -71,14 +71,13 @@ if (have_posts()) {
 									<p><?php the_sub_field('info_text'); ?></p>
 								</div>
 							</div>
-	<?php endwhile;
-endif; ?>
-						</div>
+						<?php endwhile; endif; ?>
+					</div>
 				</div>
 			</div>
 			<div class="service_post">
 				<div class="<?php echo esc_attr($container); ?>" >
-					<div class="row">
+					<div class="row d-none-xs-small">
 						<div class="col-sm-8 img_holder">
 							<img src="<?php bloginfo('template_url'); ?>/img/img1.png" alt="#" class="img-responsive block_img">
 							<div class="overlay">
@@ -129,11 +128,15 @@ endif; ?>
 									<span class="arrow"></span>
 									<span><?php the_sub_field('country_name'); ?></span>
 								</li>
-								<?php endwhile; endif; ?>
+								<?php endwhile;
+							endif; ?>
 							</ul>
 							<div class="state_description_wrap">
-								<?php $cn = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
-								<div class="state_des <?php if ($cn == 1) { echo 'active'; } ?>" id="state_<?php echo $cn++; ?>_description">
+								<?php $cn = 1;
+							if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+								<div class="state_des <?php if ($cn == 1) {
+																														echo 'active';
+																													} ?>" id="state_<?php echo $cn++; ?>_description">
 									<h4><?php the_sub_field('country_name'); ?></h4>
 									<ul class="list-unstyled locations add">
 										<?php if (have_rows('location_feature')) : while (have_rows('location_feature')) : the_row(); ?>
@@ -141,10 +144,12 @@ endif; ?>
 											<h4><?php the_sub_field('feature_title'); ?></h4>
 											<p><?php the_sub_field('feature_text'); ?></p>
 										</li>
-									<?php endwhile; endif; ?>
+									<?php endwhile;
+								endif; ?>
 									</ul>
 								</div>
-								<?php endwhile; endif; ?>
+								<?php endwhile;
+							endif; ?>
 							</div>
 						</div>					
 					</div>
@@ -160,8 +165,11 @@ endif; ?>
                     </ul>
                     <!-- The slideshow -->
                     <div class="carousel-inner">
-						<?php $cn = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
-                        <div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
+						<?php $cn = 1;
+					if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+                        <div class="carousel-item <?php if ($cn == 1) {
+																																																		echo 'active';
+																																																	} ?>">
                             <img src="<?php the_sub_field('location_image'); ?>" alt="#" class="img-responsive">
                             <div class="state_des active" id="state_<?php echo $cn++; ?>_description">
                             <h4><?php the_sub_field('country_name'); ?></h4>
@@ -171,11 +179,14 @@ endif; ?>
                                         <h4><?php the_sub_field('feature_title'); ?></h4>
                                         <p><?php the_sub_field('feature_text'); ?></p>
 									</li>
-									<?php endwhile; endif; ?>
+									<?php endwhile;
+								endif; ?>
                                 </ul>
                             </div>
 						</div>
-						<?php $cn++; endwhile; endif; ?>
+						<?php $cn++;
+					endwhile;
+					endif; ?>
                     </div>
                     <!-- Left and right controls -->
                     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">

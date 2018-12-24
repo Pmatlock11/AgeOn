@@ -77,6 +77,7 @@ $container = get_theme_mod('understrap_container_type');
 			jQuery('.state_description_wrap #'+elem+'_description').addClass('active');
 		});
 	});
+	
 </script>
 <?php wp_footer(); ?>
 

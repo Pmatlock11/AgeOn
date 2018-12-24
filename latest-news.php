@@ -19,7 +19,7 @@ get_header();
 
 $container = get_theme_mod('understrap_container_type');
 ?>
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
 <div class="wrapper" id="index-wrapper">
 	<main class="site-main" id="main">
@@ -47,7 +47,7 @@ $container = get_theme_mod('understrap_container_type');
 						<div class="text">
 							<strong class="title"><?php the_title(); ?></strong>
 							<p><?php the_excerpt(); ?></p>
-							<a href="<?php the_permalink(); ?>" class="btn_more">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+							<a href="<?php the_permalink('single-news'); ?>" class="btn_more">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 							<ul class="socials list-unstyled">
 								<?php if (have_rows('social_icon')) : while (have_rows('social_icon')) : the_row(); ?>
         							<li><a href="<?php the_sub_field('social_link'); ?>"><?php the_sub_field('social_icon'); ?></a></li>									
@@ -69,4 +69,6 @@ $container = get_theme_mod('understrap_container_type');
 		</div>
 	</main>
 </div><!-- Wrapper end -->
+<?php endwhile;
+endif; ?>
 <?php get_footer(); ?>
