@@ -33,8 +33,12 @@ if (have_posts()) {
 				<div class="row p_relative">
 					<div class="col-sm-5">
 						<h1><?php the_field('banner_heading'); ?> <span><?php the_field('banner_tagline'); ?></span></h1>
-						<div class="banner_row">
-							<a href="#" class="btn-primary">Pledge Now</a>
+						<div class="banner_row">							
+							<a href="#" class="btn-primary pledge_btn">Pledge <span class="xs_d_block">Today</span><span class="xs_d_none">Now</span></a>
+							<div class="banner_socials">
+								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="col-11 col-sm-6 banner_text pull-right right">
@@ -63,7 +67,29 @@ if (have_posts()) {
 							</div>
 						</div>
 					</div>
-					<div class="row three_cols">
+					<div id="myCarousel" class="carousel slide new_slider" data-ride="carousel">
+						<!-- Indicators -->
+						<ul class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ul>
+						<!-- The slideshow -->
+						<div class="carousel-inner three_cols">
+							<?php $cn = 1; if (have_rows('info_box')) : while (have_rows('info_box')) : the_row(); ?>
+							<div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
+								<div class="col-sm-4 text-center">
+									<div class="col">
+										<h3><?php the_sub_field('info_title'); ?></h3>
+										<p><?php the_sub_field('info_text'); ?></p>
+									</div>
+								</div>
+							</div>
+							<?php $cn++; endwhile; endif; ?>
+						</div>
+                	</div>
+
+					<div class="row three_cols xs_d_none">
 						<?php if (have_rows('info_box')) : while (have_rows('info_box')) : the_row(); ?>
 						<div class="col-sm-4 text-center">
 								<div class="col">
@@ -154,47 +180,36 @@ if (have_posts()) {
 						</div>					
 					</div>
 				</div>
-				    <div class="responsive-slider">               
+				    <div class="responsive-slider">
+					<strong class="text-center"><?php the_field('location_section_heading'); ?></strong>      
                     <div class="container mt-3">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ul>
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-						<?php $cn = 1;
-					if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
-                        <div class="carousel-item <?php if ($cn == 1) {
-																																																		echo 'active';
-																																																	} ?>">
-                            <img src="<?php the_sub_field('location_image'); ?>" alt="#" class="img-responsive">
-                            <div class="state_des active" id="state_<?php echo $cn++; ?>_description">
-                            <h4><?php the_sub_field('country_name'); ?></h4>
-                                <ul class="list-unstyled locations add">
-									<?php if (have_rows('location_feature')) : while (have_rows('location_feature')) : the_row(); ?>
-                                    <li>
-                                        <h4><?php the_sub_field('feature_title'); ?></h4>
-                                        <p><?php the_sub_field('feature_text'); ?></p>
-									</li>
-									<?php endwhile;
-								endif; ?>
-                                </ul>
-                            </div>
+						<!-- The slideshow -->
+						<div class="carousel-inner">
+							<?php $cn = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+							<div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
+								<img src="<?php the_sub_field('location_image'); ?>" alt="#" class="img-responsive">
+								<div class="state_des active" id="state_<?php echo $cn++; ?>_description">
+								<h4><?php the_sub_field('country_name'); ?></h4>
+									<ul class="list-unstyled locations add">
+										<?php if (have_rows('location_feature')) : while (have_rows('location_feature')) : the_row(); ?>
+										<li>
+											<h4><?php the_sub_field('feature_title'); ?></h4>
+											<p><?php the_sub_field('feature_text'); ?></p>
+										</li>
+										<?php endwhile; endif; ?>
+									</ul>
+								</div>
+							</div>
+							<?php $cn++; endwhile; endif; ?>
 						</div>
-						<?php $cn++;
-					endwhile;
-					endif; ?>
-                    </div>
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
+						<!-- Left and right controls -->
+						<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</a>
                 </div>
 				<div class="btns text-center">
 					<a href="#" class="btn-primary center purple">See the Impact</a>

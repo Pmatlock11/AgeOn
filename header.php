@@ -52,17 +52,9 @@ $container = get_theme_mod('understrap_container_type');
 			} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
-					<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 				</button>
 				<nav id="nav">
-					<!-- <ul class="list-unstyled">
-						<li><a href="#">STORIES</a></li>
-						<li><a href="#">GET INVOLVED</a></li>
-						<li><a href="#">IMPACT</a></li>
-						<li><a href="#">NEWS</a></li>
-						<li><a href="#">PARTNERS</a></li>
-						<li class="btn_pledge"><a href="#">Pledge Now</a></li>
-					</ul> -->
 					<?php wp_nav_menu(
 					array(
 						'theme_location' => 'primary',

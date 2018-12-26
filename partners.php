@@ -36,7 +36,8 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="row">
 					<h2 class="text-center"><?php echo get_cat_name(3); ?></h2>
 					<ul class="list-unstyled list_view">
-						<?php $args = array('post_type' => 'Partner', 'category_name' => 'platinum'); $the_query = new WP_Query($args); ?>
+						<?php $args = array('post_type' => 'Partner', 'category_name' => 'platinum');
+					$the_query = new WP_Query($args); ?>
                         <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li>
 							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
@@ -45,7 +46,9 @@ $container = get_theme_mod('understrap_container_type');
 								<p><?php the_content(); ?></p>
 							</div>
 						</li>
-						<?php wp_reset_postdata(); endwhile; endif; ?>
+						<?php wp_reset_postdata();
+					endwhile;
+					endif; ?>
 					</ul>
 				</div>
 			</div>
@@ -60,7 +63,7 @@ $container = get_theme_mod('understrap_container_type');
                             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-12 col-sm-2">
 							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
-							<div class="text">
+							<div class="text xs_d_none">
 								<strong class="title"><?php the_title(); ?></strong>
 								<p><?php the_content(); ?></p>
 							</div>
@@ -82,7 +85,7 @@ $container = get_theme_mod('understrap_container_type');
                             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-sm-3">
 							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
-							<div class="text">
+							<div class="text xs_d_none">
 								<strong class="title"><?php the_title(); ?></strong>
 								<p><?php the_content(); ?></p>
 							</div>
@@ -104,7 +107,7 @@ $container = get_theme_mod('understrap_container_type');
                             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<li class="col-sm-3">
 							<div class="img_holder"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></div>
-							<div class="text">
+							<div class="text xs_d_none">
 								<strong class="title"><?php the_title(); ?></strong>
 								<p><?php the_content(); ?></p>
 							</div>

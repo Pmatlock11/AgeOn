@@ -22,6 +22,8 @@ $light-grey: #d9dadc;
 $news-gray: #f3f3f3;
 $buttons-green: #83a60e;
 $input-border: #dfdfdf;
+$slider-indicator: #d8d8d8;
+$active-slider-indicator: #9f9f9f;
 
 // in SCSS we nest
 body {
@@ -30,6 +32,14 @@ body {
 
 a:hover {
     text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background: $green-btn !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
 
 .col-sm-6.no-left-padding {
@@ -69,7 +79,8 @@ a {
         li {
             display: inline-block;
             vertical-align: middle;
-            margin-left: 34px;
+            margin-left: 15px;
+            padding-right: 19px;
 
             a {
                 display: block;
@@ -84,6 +95,7 @@ a {
                 width: 184px;
                 text-align: center;
                 border-radius: 7px;
+                text-transform: capitalize;
             }
         }
     }
@@ -118,7 +130,7 @@ a {
 
         span {
             display: block;
-            font-size: 30px;
+            font-size: 27px;
             text-transform: uppercase;
             line-height: 34px;
             margin: 9px 8px 0;
@@ -133,6 +145,7 @@ a {
             width: 191px;
             font-size: 18px;
             line-height: 26px !important;
+            float: left;
         }
     }
 }
@@ -650,7 +663,7 @@ div:empty {
     img {
         display: block;
         margin: 0 auto 15px;
-        ;
+        max-width: 140px !important;
     }
 
     .btn-primary {
@@ -687,6 +700,7 @@ div:empty {
 
     h2 {
         margin: 0 0 20px;
+        font-size: 2.2rem;
         color: $primary-link;
         font-weight: 500;
 
@@ -1401,6 +1415,92 @@ label {
     }
 }
 
+.navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    color: $brand-primary;
+    background-image: none;
+}
+
+.xs_d_block {
+    display: none;
+}
+
+.has-drop {
+    background: url('../img/has-drop.png') no-repeat 100% 62%;
+}
+
+.banner_socials {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px 0 0 40px;
+
+    a {
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    a:first-child {
+        margin-left: 0;
+    }
+}
+
+.home .banner {
+    .pull-right {
+        font-size: 18px;
+    }
+}
+
+.carousel.new_slider {
+    padding-bottom: 30px;
+    display: none;
+}
+
+.carousel-indicators {
+    bottom: 0;
+    margin: 0;
+
+    li {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: $slider-indicator;
+
+        &.active {
+            background: $active-slider-indicator;
+        }
+    }
+
+}
+
+.story_cols h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-template-latest-news {
+    .visual {
+        h2 {
+            position: relative;
+
+            &:after {
+                width: 80px;
+                position: absolute;
+                content: '';
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background: $dark-gray;
+                display: none;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:1100px) {
     .service_post .img_holder .txt strong {
         margin: 0 0 5px;
@@ -1408,6 +1508,10 @@ label {
 }
 
 @media only screen and (max-width:999px) {
+    .banner_socials {
+        padding: 7px 0 0 20px;
+    }
+
     .banner {
         height: 440px;
         padding: 10px 0 0 0;
@@ -1596,9 +1700,21 @@ label {
     .service_post .three_cols .col h4 {
         font-size: 1.4rem;
     }
+
+    #nav ul li {
+        margin-left: 1px;
+    }
 }
 
 @media only screen and (max-width:768px) {
+    .xs_d_block {
+        display: inline-block;
+    }
+
+    .xs_d_none {
+        display: none;
+    }
+
     .locate-area .map-area {
         display: none;
     }
@@ -1651,7 +1767,7 @@ label {
         background: $black-color;
         font-size: 14px;
         height: 36px;
-        padding: 7px 8px;
+        padding: 2px 8px 7px;
     }
 
     .news_area .news_list .text {
@@ -1923,6 +2039,35 @@ label {
         padding: 9px 9px 13px;
         width: 144px;
     }
+
+    .video_section .btn-primary {
+        width: 194px;
+    }
+
+    .responsive-slider {
+        .btn-primary {
+            padding: 14px 9px 17px;
+            width: 134px;
+        }
+    }
+
+    .pledge_area {
+        .align_right {
+            font-size: 16px;
+        }
+    }
+
+    .has-drop {
+        background: none;
+    }
+
+    .carousel.new_slider {
+        display: block;
+    }
+}
+
+#footer ul li.has-drop {
+    background: none;
 }
 
 @media only screen and (max-width:576px) {
@@ -2071,7 +2216,7 @@ label {
         }
 
         .story_col {
-            margin: 0 0 10px;
+            margin: 0 0 30px;
             font-size: 14px;
         }
     }
@@ -2290,11 +2435,6 @@ label {
         }
     }
 
-    .sharing_boxes {
-        .align_right.p-top {
-            height: 371px;
-        }
-    }
 
     .pledge_area {
         img {
@@ -2304,11 +2444,12 @@ label {
 
         .align_right {
             padding-top: 50px;
+            padding-right: 29px;
         }
 
         .align_right {
             p {
-                margin: 0 0 58px;
+                margin: 0 0 32px;
             }
         }
 
@@ -2334,5 +2475,41 @@ label {
     .single .carousel-control-next,
     .single .carousel-control-prev {
         height: 45px;
+    }
+
+    .service_post .three_cols.add .col {
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin: 0 0 16px;
+    }
+
+    .banner_socials {
+        display: none;
+    }
+
+    .home .pledge_area {
+        width: 95%;
+        margin: 0 auto 30px;
+    }
+
+    .story_cols .btn-primary {
+        border-radius: 30px;
+        border: 3px solid #00c6d7;
+        background: none !important;
+        color: #00c6d7;
+        padding: 8px 20px;
+        width: 62%;
+    }
+
+    .page-template-latest-news {
+        .visual {
+            h2 {
+                padding: 0 0 10px;
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
     }
 }
