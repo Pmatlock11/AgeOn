@@ -257,4 +257,5 @@ if (have_posts()) {
 } // end while
 } // end if
 ?>
+
 <?php get_footer(); ?>

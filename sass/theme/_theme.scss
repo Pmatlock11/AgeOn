@@ -1520,6 +1520,10 @@ span.wpcf7-not-valid-tip,
     color: $black-color !important;
 }
 
+.location_lising li {
+    cursor: pointer;
+}
+
 @media only screen and (max-width:1100px) {
     .service_post .img_holder .txt strong {
         margin: 0 0 5px;
