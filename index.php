@@ -76,8 +76,11 @@ if (have_posts()) {
 						</ul>
 						<!-- The slideshow -->
 						<div class="carousel-inner three_cols">
-							<?php $cn = 1; if (have_rows('info_box')) : while (have_rows('info_box')) : the_row(); ?>
-							<div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
+							<?php $cn = 1;
+						if (have_rows('info_box')) : while (have_rows('info_box')) : the_row(); ?>
+							<div class="carousel-item <?php if ($cn == 1) {
+																																	echo 'active';
+																																} ?>">
 								<div class="col-sm-4 text-center">
 									<div class="col">
 										<h3><?php the_sub_field('info_title'); ?></h3>
@@ -85,7 +88,9 @@ if (have_posts()) {
 									</div>
 								</div>
 							</div>
-							<?php $cn++; endwhile; endif; ?>
+							<?php $cn++;
+						endwhile;
+						endif; ?>
 						</div>
                 	</div>
 
@@ -97,7 +102,8 @@ if (have_posts()) {
 									<p><?php the_sub_field('info_text'); ?></p>
 								</div>
 							</div>
-						<?php endwhile; endif; ?>
+						<?php endwhile;
+					endif; ?>
 					</div>
 				</div>
 			</div>
@@ -183,11 +189,14 @@ if (have_posts()) {
 				    <div class="responsive-slider">
 					<strong class="text-center"><?php the_field('location_section_heading'); ?></strong>      
                     <div class="container mt-3">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
 						<!-- The slideshow -->
 						<div class="carousel-inner">
-							<?php $cn = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
-							<div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
+							<?php $cn = 1;
+						if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+							<div class="carousel-item <?php if ($cn == 1) {
+																																	echo 'active';
+																																} ?>">
 								<img src="<?php the_sub_field('location_image'); ?>" alt="#" class="img-responsive">
 								<div class="state_des active" id="state_<?php echo $cn++; ?>_description">
 								<h4><?php the_sub_field('country_name'); ?></h4>
@@ -197,17 +206,20 @@ if (have_posts()) {
 											<h4><?php the_sub_field('feature_title'); ?></h4>
 											<p><?php the_sub_field('feature_text'); ?></p>
 										</li>
-										<?php endwhile; endif; ?>
+										<?php endwhile;
+									endif; ?>
 									</ul>
 								</div>
 							</div>
-							<?php $cn++; endwhile; endif; ?>
+							<?php $cn++;
+						endwhile;
+						endif; ?>
 						</div>
 						<!-- Left and right controls -->
-						<a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+						<a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
 							<span class="carousel-control-prev-icon"></span>
 						</a>
-						<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+						<a class="carousel-control-next" href="#myCarousel2" data-slide="next">
 							<span class="carousel-control-next-icon"></span>
 						</a>
                 </div>

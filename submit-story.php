@@ -39,6 +39,7 @@ if (have_posts()) {
 			<?php echo do_shortcode('[contact-form-7 id="180" title="Submit Story Form"]'); ?>
 		</div>
 	</main>
+	<?php get_template_part('misc-part'); ?>
 </div><!-- Wrapper end -->
 <?php 
 } // end while

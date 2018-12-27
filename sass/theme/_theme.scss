@@ -40,6 +40,8 @@ a:hover {
     background: $green-btn !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
+    color: $purple !important;
+    border-color: $purple !important;
 }
 
 .col-sm-6.no-left-padding {
@@ -715,7 +717,7 @@ div:empty {
             width: 200px;
             position: absolute;
             content: '';
-            height: 2px;
+            height: 3px;
             bottom: 0;
             left: 50%;
             transform: translate(-50%, 0);
@@ -823,7 +825,7 @@ div:empty {
 
     .map_padding {
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 23px;
     }
 
 
@@ -1136,7 +1138,7 @@ div:empty {
         background: $purple;
         display: block;
         margin: 0 auto 10px;
-        color: $brand-primary;
+        color: $brand-primary !important;
     }
 
     p {
@@ -1231,7 +1233,7 @@ div:empty {
 .map_img_holder:after,
 .map_img_holder:before {
     width: 200px;
-    height: 2px;
+    height: 3px;
     position: absolute;
     content: '';
     top: 50%;
@@ -1488,10 +1490,10 @@ label {
             position: relative;
 
             &:after {
-                width: 80px;
+                width: 138px;
                 position: absolute;
                 content: '';
-                height: 2px;
+                height: 3px;
                 bottom: 0;
                 left: 0;
                 background: $dark-gray;
@@ -1499,6 +1501,23 @@ label {
             }
         }
     }
+}
+
+.page-template-about {
+    .misc_area {
+        display: none;
+    }
+}
+
+span.wpcf7-not-valid-tip,
+.wpcf7 .wpcf7-validation-errors {
+    height: auto;
+    text-align: center;
+}
+
+.black_link {
+    font-weight: 600;
+    color: $black-color !important;
 }
 
 @media only screen and (max-width:1100px) {
@@ -2064,6 +2083,20 @@ label {
     .carousel.new_slider {
         display: block;
     }
+
+    #myCarousel2 {
+        .carousel-item {
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    .full_description {
+        h3 {
+            color: $red-button;
+        }
+    }
 }
 
 #footer ul li.has-drop {
@@ -2190,6 +2223,7 @@ label {
         h3 {
             font-size: 13px;
             line-height: 18px;
+            color: $red-button;
         }
 
         .btns a {
@@ -2200,7 +2234,7 @@ label {
     }
 
     .visual .story h2 {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .story_cols {
@@ -2376,6 +2410,8 @@ label {
     }
 
     .service_post .three_cols {
+        margin-top: 13px;
+        padding-top: 0;
         font-size: 16px;
     }
 
@@ -2463,13 +2499,12 @@ label {
     }
 
     .single .carousel-inner {
-        padding: 0 15px;
-        height: 181px;
+        padding: 0;
     }
 
     .single .carousel-item img {
         max-width: 100%;
-        height: 181px;
+        width: 100%;
     }
 
     .single .carousel-control-next,
@@ -2492,15 +2527,6 @@ label {
         margin: 0 auto 30px;
     }
 
-    .story_cols .btn-primary {
-        border-radius: 30px;
-        border: 3px solid #00c6d7;
-        background: none !important;
-        color: #00c6d7;
-        padding: 8px 20px;
-        width: 62%;
-    }
-
     .page-template-latest-news {
         .visual {
             h2 {
@@ -2511,5 +2537,78 @@ label {
                 }
             }
         }
+    }
+
+    .contact_form .row .custom_file_btn {
+        width: 260px !important;
+    }
+
+    .wpcf7-list-item label:after {
+        top: 0;
+    }
+
+    .wpcf7-list-item label {
+        position: relative;
+        margin: 25px 0 2px;
+        padding: 20px 0 0;
+    }
+
+    .row.sharing_boxes {
+        display: none;
+    }
+
+    .home .row.sharing_boxes {
+        display: block;
+    }
+
+    .xs_d_none,
+    #demo .slide_caption {
+        display: none !important;
+    }
+
+    .visual h2.bold {
+        margin: 10px 0;
+    }
+
+    .xs_center {
+        text-align: center;
+    }
+
+    .single #demo {
+        max-width: 600px;
+        padding: 0 15px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slider_btns {
+        background: $buttons-green;
+        overflow: hidden;
+        height: 48px;
+    }
+
+    #demo .carousel-control-prev {
+        right: auto;
+        left: 20%;
+    }
+
+    #demo .carousel-control-next {
+        right: 20%;
+        left: auto;
+    }
+
+    .story_cols .btn-primary,
+    .full_description .btns a {
+        border-radius: 30px;
+        border: 3px solid #00c6d7;
+        background: none !important;
+        color: #00c6d7;
+        padding: 8px 20px;
+        width: 250px;
+    }
+
+    .full_description .btns a {
+        width: 250px;
+        margin-bottom: 10px;
     }
 }

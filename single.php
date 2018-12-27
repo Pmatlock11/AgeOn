@@ -34,8 +34,8 @@ if (have_posts()) {
 						<div class="v-middle no-padding">
 							<div class="flex_layout">
 								<div class="col-12 col-sm-6"><img src="<?php the_field('large_image') ?>" alt="#" class="img-responsive"></div>
-								<div class="col-12 col-sm-6">
-									<strong>Meet</strong>
+								<div class="col-12 col-sm-6 xs_center">
+									<strong class="xs_d_none">Meet</strong>
 									<h2 class="bold"><?php the_title(); ?></h2>
 									<p><?php the_excerpt(); ?></p>
 								</div>
@@ -55,11 +55,8 @@ if (have_posts()) {
 				<div id="demo" class="carousel slide" data-ride="carousel">
 					<!-- The slideshow -->
 					<div class="carousel-inner">
-						<?php $cn = 1;
-					if (have_rows('slide')) : while (have_rows('slide')) : the_row(); ?>
-						<div class="carousel-item <?php if ($cn == 1) {
-																																echo ' active';
-																															} ?>">
+						<?php $cn = 1; if (have_rows('slide')) : while (have_rows('slide')) : the_row(); ?>
+						<div class="carousel-item <?php if ($cn == 1) { echo ' active'; } ?>">
 							<img src="<?php the_sub_field('slide_image'); ?>" alt="#" class="quote_img">
 							<div class="slide_caption">
 								<div class="d-table">
@@ -70,16 +67,17 @@ if (have_posts()) {
 								</div>
 							</div>
 						</div>
-						<?php endwhile;
-					endif; ?>
+						<?php endwhile; endif; ?>
 					</div>
 					<!-- Left and right controls -->
-					<a class="carousel-control-prev" href="#demo" data-slide="prev">
-						<i class="fa fa-chevron-left" aria-hidden="true"></i>
-					</a>
-					<a class="carousel-control-next" href="#demo" data-slide="next">
-						<i class="fa fa-chevron-right" aria-hidden="true"></i>
-					</a>
+					<div class="slider_btns">
+						<a class="carousel-control-prev" href="#demo" data-slide="prev">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						</a>
+						<a class="carousel-control-next" href="#demo" data-slide="next">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="row sharing_row text-center">
@@ -88,8 +86,7 @@ if (have_posts()) {
 					<ul class="list-unstyled">
 						<?php if (have_rows('social_profile')) : while (have_rows('social_profile')) : the_row(); ?>
 						<li><a href="<?php the_sub_field('social_link'); ?>"><?php the_sub_field('social_icon'); ?></a></li>
-						<?php endwhile;
-					endif; ?>
+						<?php endwhile; endif; ?>
 					</ul>
 				</div>
 			</div>

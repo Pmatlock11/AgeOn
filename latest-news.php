@@ -51,15 +51,16 @@ $container = get_theme_mod('understrap_container_type');
 							<ul class="socials list-unstyled">
 								<?php if (have_rows('social_icon')) : while (have_rows('social_icon')) : the_row(); ?>
         							<li><a href="<?php the_sub_field('social_link'); ?>"><?php the_sub_field('social_icon'); ?></a></li>									
-								<?php endwhile;
-							endif; ?>
-								
+								<?php endwhile; endif; ?>
 							</ul>
 						</div>
 					</div>
-					<?php wp_reset_postdata();
-				endwhile;
-				endif; ?>
+					<?php wp_reset_postdata(); endwhile; endif; ?>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center load_more_div">
+						<a href="#" class="black_link">LOAD MORE NEWS<br><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
