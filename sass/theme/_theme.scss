@@ -24,6 +24,7 @@ $buttons-green: #83a60e;
 $input-border: #dfdfdf;
 $slider-indicator: #d8d8d8;
 $active-slider-indicator: #9f9f9f;
+$yellow: #ecac00;
 
 // in SCSS we nest
 body {
@@ -40,7 +41,7 @@ a:hover {
     background: $green-btn !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
-    color: $purple !important;
+    color: $brand-primary !important;
     border-color: $purple !important;
 }
 
@@ -166,6 +167,43 @@ a {
 
 .red-button {
     background: $red-button;
+}
+
+.flex_layout {
+    .img_holder {
+        position: relative;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    left: 15px;
+    bottom: 0;
+
+
+    .txt {
+        width: 67%;
+        float: left;
+        color: #fff;
+        padding: 30px 0 0 42px;
+        font-weight: 700;
+
+        strong {
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 35px;
+            display: block;
+            font-weight: 700;
+            color: $brand-primary;
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0 0 26px;
+        }
+    }
 }
 
 .service_post {
@@ -456,7 +494,7 @@ a {
         width: 249px;
         margin-left: -15px;
         left: 15px;
-        top: -3px;
+        top: 0;
         position: absolute;
     }
 
@@ -1524,6 +1562,53 @@ span.wpcf7-not-valid-tip,
     cursor: pointer;
 }
 
+.story_box {
+    max-width: 278px;
+    margin: 10px auto 60px;
+    padding: 30px;
+    color: $dark-gray;
+    box-shadow: 0 0 14px -3px $shadow-color;
+
+    strong {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin: 0 0 12px;
+    }
+}
+
+.story_socials {
+    li {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    a {
+        width: 60px;
+        height: 60px;
+        display: block;
+        background: #e55625;
+        color: #fff;
+        border-radius: 100%;
+        text-align: center;
+        padding: 10px 0 0;
+    }
+}
+
+.btn-primary.yellow {
+    background: $yellow;
+}
+
+.show_on_xs {
+    display: none;
+}
+
+.col-sm-6 {
+    position: relative;
+}
+
 @media only screen and (max-width:1100px) {
     .service_post .img_holder .txt strong {
         margin: 0 0 5px;
@@ -1726,6 +1811,19 @@ span.wpcf7-not-valid-tip,
 
     #nav ul li {
         margin-left: 1px;
+    }
+
+    .visual.story {
+        .overlay {
+            .txt {
+                padding: 30px 0 0 12px;
+
+                strong {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
     }
 }
 
@@ -2099,6 +2197,31 @@ span.wpcf7-not-valid-tip,
     .full_description {
         h3 {
             color: $red-button;
+        }
+    }
+
+    .visual.story {
+        .overlay {
+            top: auto;
+
+            .txt {
+                width: 100%;
+                float: left;
+                color: #fff;
+                padding: 30px 0 0;
+                font-weight: 700;
+
+                strong {
+                    padding: 0 10px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+
+                p {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -2548,13 +2671,12 @@ span.wpcf7-not-valid-tip,
     }
 
     .wpcf7-list-item label:after {
-        top: 0;
+        top: 19px;
     }
 
     .wpcf7-list-item label {
-        position: relative;
-        margin: 25px 0 2px;
-        padding: 20px 0 0;
+        margin: 10px 0 2px;
+        padding: 0 0 0 44px;
     }
 
     .row.sharing_boxes {
@@ -2580,8 +2702,7 @@ span.wpcf7-not-valid-tip,
 
     .single #demo {
         max-width: 600px;
-        padding: 0 15px;
-        margin: 0 auto;
+        margin: 0 auto 10px;
         overflow: hidden;
     }
 
@@ -2615,4 +2736,35 @@ span.wpcf7-not-valid-tip,
         width: 250px;
         margin-bottom: 10px;
     }
+
+    .home #text-3 {
+        display: block;
+    }
+
+    .load_more_div.add {
+        padding: 7px 0 29px;
+    }
+
+    .sharing_row {
+        display: none;
+    }
+
+    .full_description .btns a,
+    .story_cols .btn-primary {
+        color: $mycolor;
+    }
+
+    .story_box {
+        .btn-primary.yellow {
+            margin: 0 auto 22px;
+            padding: 14px 0 16px;
+            width: 200px;
+            font-size: 16px;
+        }
+    }
+
+    .show_on_xs {
+        display: block;
+    }
+
 }

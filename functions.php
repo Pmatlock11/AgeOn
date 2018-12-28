@@ -156,3 +156,14 @@ function partner_init()
 	);
 }
 add_action('init', 'partner_init');
+
+function change_excerpt($text)
+{
+	$pos = strrpos($text, '[');
+	if ($pos === false) {
+		return $text;
+	}
+
+	return rtrim(substr($text, 0, $pos));
+}
+add_filter('get_the_excerpt', 'change_excerpt');

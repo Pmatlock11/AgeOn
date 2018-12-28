@@ -58,7 +58,7 @@ $container = get_theme_mod('understrap_container_type');
 					<?php wp_reset_postdata(); endwhile; endif; ?>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 text-center load_more_div">
+					<div class="col-sm-12 text-center load_more_div add">
 						<a href="#" class="black_link">LOAD MORE NEWS<br><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
 					</div>
 				</div>

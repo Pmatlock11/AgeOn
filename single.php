@@ -101,6 +101,20 @@ if (have_posts()) {
 				</div>
 			</div>
 		</div>
+		<div class="<?php echo esc_attr($container); ?> show_on_xs" >
+			<div class="row">
+				<div class="story_box">
+					<strong class="text-uppercase"><?php the_field('box_heading', 22); ?></strong>
+					<p><?php the_field('box_text', 22); ?></p>
+					<a href="<?php the_permalink(20); ?>" class="btn-primary yellow">Submit your Story</a>
+					<ul class="story_socials list-unstyled">
+						<?php if (have_rows('social_profile')) : while (have_rows('social_profile')) : the_row(); ?>
+						<li><a href="<?php the_sub_field('social_link'); ?>"><?php the_sub_field('social_icon'); ?></a></li>
+						<?php endwhile; endif; ?>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="<?php echo esc_attr($container); ?> sharing_boxes" >
 			<?php get_template_part('support-part'); ?>
 			<?php get_template_part('sharing-widgets'); ?>

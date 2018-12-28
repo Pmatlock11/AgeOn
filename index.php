@@ -192,11 +192,8 @@ if (have_posts()) {
                     <div id="myCarousel2" class="carousel slide" data-ride="carousel">
 						<!-- The slideshow -->
 						<div class="carousel-inner">
-							<?php $cn = 1;
-						if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
-							<div class="carousel-item <?php if ($cn == 1) {
-																																	echo 'active';
-																																} ?>">
+							<?php $cn = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+							<div class="carousel-item <?php if ($cn == 1) { echo 'active'; } ?>">
 								<img src="<?php the_sub_field('location_image'); ?>" alt="#" class="img-responsive">
 								<div class="state_des active" id="state_<?php echo $cn++; ?>_description">
 								<h4><?php the_sub_field('country_name'); ?></h4>
@@ -206,14 +203,11 @@ if (have_posts()) {
 											<h4><?php the_sub_field('feature_title'); ?></h4>
 											<p><?php the_sub_field('feature_text'); ?></p>
 										</li>
-										<?php endwhile;
-									endif; ?>
+										<?php endwhile; endif; ?>
 									</ul>
 								</div>
 							</div>
-							<?php $cn++;
-						endwhile;
-						endif; ?>
+							<?php $cn++; endwhile; endif; ?>
 						</div>
 						<!-- Left and right controls -->
 						<a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">

@@ -43,7 +43,17 @@ if (have_posts()) {
 					<div class="d-table">
 						<div class="v-middle no-padding">
 							<div class="flex_layout">
-								<div class="col-12 col-sm-6"><img src="<?php the_field('large_image'); ?>" alt="#" class="img-responsive"></div>
+								<div class="col-12 col-sm-6">
+									<div class="img_holder">
+										<img src="<?php the_field('large_image'); ?>" alt="#" class="img-responsive">
+										<div class="overlay">
+											<div class="txt">
+												<strong><?php the_field('quote_heading', 22); ?></strong>
+												<p><?php the_field('quote_author', 22); ?></p>
+											</div>
+										</div>
+									</div>
+								</div>
 								<div class="col-12 col-sm-6 descriptive">
 									<p><?php the_excerpt() ?></p>
 									<a href="<?php the_permalink(); ?>" class="btn-primary purple left">See the Story</a>
