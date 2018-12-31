@@ -84,6 +84,13 @@ $container = get_theme_mod('understrap_container_type');
 			jQuery('.state_des').removeClass('active');
 			jQuery('.state_description_wrap #'+elem+'_description').addClass('active');
 		});
+
+		jQuery('.location_lising a').click(function(e) {
+			e.preventDefault();
+			jQuery('.ca_state').removeClass('active');
+			var elem = jQuery(this).attr('href');
+			jQuery(elem).addClass('active');
+		});
 	});
 	
 </script>

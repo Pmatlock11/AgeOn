@@ -55,7 +55,9 @@ $container = get_theme_mod('understrap_container_type');
 					<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 				</button>
 				<nav id="nav">
-					<?php wp_nav_menu(
+				
+					<?php
+				wp_nav_menu(
 					array(
 						'theme_location' => 'primary',
 						'menu_class' => 'list-unstyled text-uppercase',
@@ -64,7 +66,8 @@ $container = get_theme_mod('understrap_container_type');
 						'depth' => 2,
 						'walker' => new Understrap_WP_Bootstrap_Navwalker(),
 					)
-				); ?>
+				);
+				?>
 				</nav>
 				<!-- The WordPress Menu goes here -->
 				

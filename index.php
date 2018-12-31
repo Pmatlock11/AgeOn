@@ -154,14 +154,14 @@ if (have_posts()) {
 						</div>
 						<div class="col-sm-3 pull-right">
 							<ul class="list-unstyled locations location_lising ">
-								<?php $cn = 1;
-							if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
+								<?php $cn = 1; $counter = 1; if (have_rows('location_options')) : while (have_rows('location_options')) : the_row(); ?>
 								<li class="state_<?php echo $cn++; ?>">
-									<span class="arrow"></span>
-									<span><?php the_sub_field('country_name'); ?></span>
+									<a href="#state_<?php echo $counter++; ?>">
+										<span class="arrow"></span>
+										<span><?php the_sub_field('country_name'); ?></span>
+									</a>
 								</li>
-								<?php endwhile;
-							endif; ?>
+								<?php endwhile; endif; ?>
 							</ul>
 							<div class="state_description_wrap">
 								<?php $cn = 1;

@@ -369,6 +369,9 @@ a {
     font-size: 19px;
     line-height: 23px;
 
+    a {
+        color: $light-gray
+    }
 
 
     li {
@@ -1295,7 +1298,8 @@ svg {
     width: 100%;
 }
 
-.ca_state:hover {
+.ca_state:hover,
+.ca_state.active {
     cursor: pointer;
     fill: #000;
 }
@@ -1308,6 +1312,10 @@ svg {
 .locations li.active {
     color: #e55625;
     font-weight: bold;
+
+    a {
+        color: #e55625;
+    }
 }
 
 .location_lising li.active .arrow {
